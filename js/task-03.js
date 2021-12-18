@@ -18,23 +18,15 @@ const images = [
   },
 ];
 
-const imgList = images.map(({url, alt}) => {
-  `<img src = "${url}" alt = "${alt}">`;
-  
-  // imgItemIns.insertAdjacentHTML("afterbegin", ` url: ${imgObj.url}, alt: ${imgObj.alt}`)
-  console.log(imgList);
- 
-  // imgItem.classList.add('item');
-  // imgList.push(imgItem);
-  // return imgList
-})
+const imgList = [];
+
+ images.map(({url, alt}) => {
+   const img = `<li><img src = "${url}" alt = "${alt}" width="400" height= "250"></li> `;
+     // console.log(img);
+    imgList.push(img);
+    return imgList
+ })
+
+document.querySelector('.gallery').insertAdjacentHTML("afterbegin", imgList.join(" "));
 
   
-
- 
-  // imgItem.classList.add('item');
-  // imgList.push(imgItem);
-  // return imgList
-
-// console.log(...imgList);
-// document.querySelector('.gallery').after()
