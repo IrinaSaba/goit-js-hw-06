@@ -10,6 +10,6 @@ const spanText = document.querySelector("#text");
 
 inputControl.addEventListener("input", (event) => {
    spanText.style.fontSize = `${event.currentTarget.value}px`;
-   console.log(event.currentTarget.value);
+   // console.log(event.currentTarget.value);
 });
 
