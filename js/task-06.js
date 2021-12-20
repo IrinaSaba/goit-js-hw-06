@@ -32,3 +32,4 @@ const countLetters = (event) => {
 };
 
 inputPlace.addEventListener("blur", countLetters);
+addDeleteClass();
