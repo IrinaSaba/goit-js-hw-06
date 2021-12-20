@@ -12,7 +12,7 @@ inputName.addEventListener("input", hiName);
  function hiName(event) {
     if (inputName.value !== "") { 
        outputHi.textContent = inputName.value;
-       return outputHi.textContent
+       return
     }
    outputHi.textContent = "Anonymous";
 };
