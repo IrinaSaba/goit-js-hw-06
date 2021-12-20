@@ -40,4 +40,4 @@ ingredients.map(ingr => {
   return ingrList
 })
 // console.log(...ingrList);
-document.querySelector('#ingredients').after(...ingrList)
+document.querySelector('#ingredients').append(...ingrList)

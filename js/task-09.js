@@ -7,8 +7,6 @@
 
 // Для генерации случайного цвета используй функцию getRandomHexColor.
 
-
-
 const changeBtn = document.querySelector(".change-color");
 const textColor = document.querySelector(".color");
 const bodyColor = document.querySelector("body");
@@ -18,8 +16,9 @@ function getRandomHexColor() {
 }
 
 changeBtn.addEventListener("click", (event) => {
-  bodyColor.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-  textColor.textContent = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  const color = getRandomHexColor();
+  bodyColor.style.backgroundColor = color;
+  textColor.textContent = color;
 });
 
 

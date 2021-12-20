@@ -18,15 +18,9 @@ const images = [
   },
 ];
 
-const imgList = [];
-
- images.map(({url, alt}) => {
-   const img = `<li><img src = "${url}" alt = "${alt}" width="400" height= "250"></li> `;
-     // console.log(img);
-    imgList.push(img);
-    return imgList
- })
-
-document.querySelector('.gallery').insertAdjacentHTML("afterbegin", imgList.join(" "));
-
+const imgList = images.map(({ url, alt }) => 
   
+   `<li><img src = "${url}" alt = "${alt}" width="400" height= "250"></li> `).join("");
+
+document.querySelector('.gallery').insertAdjacentHTML("afterbegin", imgList);
+
