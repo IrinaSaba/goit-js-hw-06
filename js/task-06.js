@@ -12,20 +12,23 @@
 // Для добавления стилей, используй CSS-классы valid и invalid, которые мы уже добавили в исходные файлы задания.
 
 
-// const inputPlace = document.querySelector("#validation-input");
-// const lengthData = inputPlace.dataset.length;
-// inputPlace.classList.add("invalid", "valid");
+const inputPlace = document.querySelector("#validation-input");
+const lengthData = parseInt(inputPlace.dataset.length);
 
-// // function addDeleteClass(oldClass, newClass) {
-// //    inputPlace.classList.replace(oldClass, newClass);
-// //    return
-// // }
 
-// const countLetters = (event) => {
-//    if (inputPlace.value.length === lengthData) { 
-//       inputPlace.classList.remove("invalid");     
-//    } 
-//      inputPlace.classList.remove("valid");
-// };
+const addDeleteClass = (add, remove) => {
+   inputPlace.classList.add(add);
+   inputPlace.classList.remove(remove);
+};
 
-// inputPlace.addEventListener("blur", countLetters);
+const countLetters = (event) => {
+   // console.log(inputPlace.value.length);
+   // console.log(lengthData);
+   if (inputPlace.value.length === lengthData) { 
+      addDeleteClass("valid", "invalid"); 
+      return
+   } 
+     addDeleteClass("invalid", "valid"); 
+};
+
+inputPlace.addEventListener("blur", countLetters);
